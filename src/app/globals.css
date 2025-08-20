@@ -1,26 +1,67 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #ffffff; /* 0 0% 100% */
+  --foreground: #3b2c3b; /* 265 15% 15% */
+  --secondary: #f5f4f7;
+  --secondary-foreground: #2a262c;
+  --card: #ffffff; /* 0 0% 100% */
+  --card-foreground: #3b2c3b; /* 265 15% 15% */
+  --popover: #ffffff; /* 0 0% 100% */
+  --popover-foreground: #3b2c3b; /* 265 15% 15% */ /* Purple-based primary palette */
+  --primary: #6b21a8; /* 265 85% 42% */
+  --primary-light: #8b4dd8; /* 265 75% 55% */
+  --primary-dark: #3a0080; /* 265 95% 32% */
+  --primary-foreground: #ffffff; /* 0 0% 100% */
+  --muted: #f2f0f5; /* 265 10% 95% */
+  --muted-foreground: #777177; /* 265 8% 45% */
+  --accent: #e3d9f2; /* 265 25% 92% */
+  --accent-foreground: #6b21a8; /* 265 85% 42% */
+  --destructive: #ff5050; /* 0 84.2% 60.2% */
+  --destructive-foreground: #ffffff; /* 0 0% 100% */
+  --border: #d6cce1; /* 265 15% 88% */
+  --input: #d6cce1; /* 265 15% 88% */
+  --ring: #6b21a8; /* 265 85% 42% */
+  --radius: 0.75rem;
+  --sidebar-background: #fafafa; /* 0 0% 98% */
+  --sidebar-foreground: #434242; /* 240 5.3% 26.1% */
+  --sidebar-primary: #1a1a1a; /* 240 5.9% 10% */
+  --sidebar-primary-foreground: #fafafa; /* 0 0% 98% */
+  --sidebar-accent: #f5f5f5; /* 240 4.8% 95.9% */
+  --sidebar-accent-foreground: #1a1a1a; /* 240 5.9% 10% */
+  --sidebar-border: #e0e0f0; /* 220 13% 91% */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fff;
+}
+
+@keyframes accordion-down {
+  from {
+    height: 0;
+    opacity: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+    opacity: 1;
+  }
+  to {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+.animate-accordion-down {
+  animation: accordion-down 0.3s ease-out forwards;
+}
+
+.animate-accordion-up {
+  animation: accordion-up 0.3s ease-out forwards;
 }

@@ -1,103 +1,121 @@
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "../components/ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../components/ui/card";
+import { Shield, Zap, Clock, Headphones } from "lucide-react";
+import heroImage from "@/assets/host.gif";
+import LottieAnimation from "@/components/Lottie";
+
+const features = [
+  {
+    icon: Shield,
+    title: "Advanced Security",
+    description: "Free SSL protection and automatic backups to ensure your data is safe.",
+  },
+  {
+    icon: Zap,
+    title: "High Performance",
+    description: "Ultra-fast SSD servers with global CDN for maximum speed.",
+  },
+  {
+    icon: Clock,
+    title: "99.9% Uptime",
+    description: "We guarantee maximum availability with redundant infrastructure and 24/7 monitoring.",
+  },
+  {
+    icon: Headphones,
+    title: "Expert Support",
+    description: "Technical team available 24/7 to help whenever you need it.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-[#ffffff]">
+      <section className="relative pt-30 pb-16 overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#f5f4f7]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
+            {/* Texto */}
+            <div className="flex-1 space-y-8 animate-fade-in max-w-lg">
+              <div className="space-y-4">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-[#1a1a1a]">
+                  Reliable
+                  <span className="text-[#6b21a8] block">Hosting</span>
+                  for your project
+                </h1>
+                <p className="text-lg text-[#777177]">Have peace of mind knowing your website is in good hands. We offer robust infrastructure, expert support, and exceptional performance.</p>
+              </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button size="lg" asChild>
+                  <Link href="/services">View Plans</Link>
+                </Button>
+                <Button size="lg" variant="outline" className="border-[#6b21a8] text-[#6b21a8]">
+                  Talk to an Expert
+                </Button>
+              </div>
+
+              <div className="flex items-center space-x-8 text-sm text-[#777177]">
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                  <span>99.9% Uptime</span>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <div className="w-2 h-2 bg-[#6b21a8] rounded-full"></div>
+                  <span>24/7 Support</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Animação */}
+            <div className="flex-1 max-w-lg hidden lg:block">
+              <LottieAnimation />
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      <section className="py-20 bg-[#ffffff]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-[#1a1a1a]">Why choose Floor Hosting?</h2>
+            <p className="text-lg max-w-2xl mx-auto text-[#777177]">We combine cutting-edge technology with personalized service to deliver the best web hosting experience.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {features.map((feature, index) => (
+              <Card key={index} className={`text-center border border-[#d6cce1]`}>
+                <CardHeader className="pb-4">
+                  <div className="w-12 h-12 bg-[#6b21a8]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <feature.icon className="h-6 w-6 text-[#6b21a8]" />
+                  </div>
+                  <CardTitle className="text-lg text-[#1a1a1a]">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-[#777177]">{feature.description}</CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="py-20 bg-[#6b21a8]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center animate-fade-in">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-4 text-[#ffffff]">Ready to get started?</h2>
+          <p className="text-lg mb-8 max-w-2xl mx-auto text-[#ffffffCC] font-semibold">
+            Try our hosting for 30 days risk-free.
+            <br />
+            If you're not satisfied, we'll refund your money.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button size="lg" variant="secondary" asChild>
+              <Link href="/services">Get Started Now</Link>
+            </Button>
+            <Button size="lg" variant="secondary">
+              Talk to Sales
+            </Button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
