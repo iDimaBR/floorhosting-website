@@ -1,6 +1,6 @@
 "use client";
 
-import Player, { useLottie } from "lottie-react";
+import { useLottie } from "lottie-react";
 import animationData from "../../public/host.json";
 
 export default function LottieAnimation() {

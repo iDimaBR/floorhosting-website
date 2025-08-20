@@ -115,7 +115,7 @@ const About = () => {
           <div className="text-center slide-up stagger-2">
             <div className="bg-[#f2f0f5] rounded-2xl p-12 max-w-2xl mx-auto">
               <p className="text-[#777177] italic mb-6">
-                "Our team consists of infrastructure, development, and customer support specialists. We work tirelessly to ensure each client has an exceptional experience with us."
+                Our team consists of infrastructure, development, and customer support specialists. We work tirelessly to ensure each client has an exceptional experience with us.
               </p>
               <div className="text-sm text-[#777177]">— Floor Hosting Team</div>
             </div>
