@@ -1,8 +1,9 @@
 # FloorHosting | Template Hosting Website
 
-[Live mode](https://floorhosting-live.vercel.app/)
+![Preview do site](https://i.imgur.com/cAEQjfe.png)
 
 A modern and responsive hosting website built with **Next.js**, **Tailwind CSS**, and **Radix UI**.  
+Check it: [Live mode](https://floorhosting-live.vercel.app/)
 
 ## Features  
 - Fast and SEO-friendly with Next.js  
