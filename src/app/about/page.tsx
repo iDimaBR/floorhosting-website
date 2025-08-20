@@ -23,7 +23,6 @@ const About = () => {
 
   return (
     <div className="min-h-screen pt-20 bg-[#ffffff] text-[#1a1a1a]">
-      {/* Hero Section */}
       <section className="bg-gradient-to-br from-[#ffffff] to-[#f5f4f7] py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center fade-in">
@@ -37,8 +36,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Story Section */}
       <section className="py-20 bg-[#ffffff]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
@@ -84,8 +81,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Values Section */}
       <section className="py-20 bg-[#f5f4f7]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in">
@@ -110,8 +105,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* Team Section */}
       <section className="py-20 bg-[#ffffff]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 fade-in">

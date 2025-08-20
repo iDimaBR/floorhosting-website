@@ -35,7 +35,6 @@ export default function Home() {
       <section className="relative pt-30 pb-16 overflow-hidden bg-gradient-to-br from-[#ffffff] to-[#f5f4f7]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12">
-            {/* Texto */}
             <div className="flex-1 space-y-8 animate-fade-in max-w-lg">
               <div className="space-y-4">
                 <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight text-[#1a1a1a]">
@@ -66,8 +65,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            {/* Animação */}
             <div className="flex-1 max-w-lg hidden lg:block">
               <LottieAnimation />
             </div>
